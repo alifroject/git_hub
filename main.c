@@ -1,28 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
-		int Bilangan;
-	   	char Lagi;
-	   	int a, b, X;
+int main() {
+    char nama[50]; // Maksimal panjang nama adalah 49 karakter
+    int X;
+    int a;
+    int b;
 
-		printf("Mencari Bilangan Ganjil/Genap\n");
 
-		printf("Masukkan Angka Pertama: ");
-        scanf("%d", &a);
+    printf("Masukkan nama Anda: ");
+    scanf("%s", nama); // Membaca nama dari input
 
-        printf("Masukkan Angka kedua: ");
-        scanf("%d", &b);
-		for (Bilangan = a; Bilangan <= b; Bilangan++) {
-            if(Bilangan %2 == 1) {
-                printf("  %d Adalah Ganjil \n", Bilangan);
-            }
-		else {
-             printf("  %d Adalah Genap \n", Bilangan);
-		}
+    printf("Halo, %s!\n", nama); // Menyapa pengguna dengan nama yang dimasukkan
 
-		}
+    printf("Masukkan Angka Pertama: ");
+    scanf("%d", &a);
 
-		return 0;
-		}
+    printf("Masukkan Angka terakhir: ");
+    scanf("%d", &b);
+    for (X = a; X <= b; X++) {
+        printf("%s - Perulangan ke-%d\n", nama, X); // Mencetak pesan perulangan dengan nama
+    }
 
+    return 0;
+}
